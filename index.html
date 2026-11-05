@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N & B Group of Companies | Building Tomorrow Together</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#C5A059',
+                            light: '#D4B87E',
+                            dark: '#9A7B38',
+                            metallic: '#E5C58C',
+                            accent: '#C5A880'
+                        },
+                        charcoal: {
+                            900: '#0F1115',
+                            800: '#171A21',
+                            700: '#212630',
+                            600: '#2D3442'
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF3D1 0%, #C5A059 50%, #9A7B38 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-btn-gradient {
+            background: linear-gradient(135deg, #E5C58C 0%, #C5A059 50%, #9A7B38 100%);
+        }
+        .gold-btn-gradient:hover {
+            background: linear-gradient(135deg, #F3D59D 0%, #D4B87E 50%, #C5A059 100%);
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 17, 21, 0.75), rgba(15, 17, 21, 0.88)), url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+        .cta-bg {
+            background: linear-gradient(rgba(15, 17, 21, 0.85), rgba(15, 17, 21, 0.92)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F1115;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C5A059;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-charcoal-900 text-gray-200 font-sans antialiased selection:bg-gold selection:text-charcoal-900">
+
+    <!-- Top Notification / Announcement Bar -->
+    <div class="bg-gold/10 border-b border-gold/20 text-xs py-2 px-4 text-center text-gold font-medium">
+        <span><i class="fa-solid fa-location-dot mr-2"></i> Shop No 5, CC-4, Block 8 Clifton, Karachi | WhatsApp Helpline: <a href="https://wa.me/923357229551" target="_blank" class="underline hover:text-white">0335 7229551</a></span>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-charcoal-900/95 backdrop-blur-md border-b border-gold/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded border border-gold flex items-center justify-center bg-charcoal-800 shadow-lg group-hover:border-gold-metallic transition">
+                    <span class="font-cinzel font-bold text-xl text-gold">N&B</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-cinzel font-bold text-lg tracking-wider text-white">N & B</span>
+                    <span class="text-[10px] uppercase tracking-widest text-gold font-semibold">GROUP OF COMPANIES</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="#" class="text-gold hover:text-white transition">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-gold transition">About Us</a>
+                <a href="#companies" class="text-gray-300 hover:text-gold transition">Our Companies</a>
+                <a href="#projects" class="text-gray-300 hover:text-gold transition">Our Projects</a>
+                <a href="#services" class="text-gray-300 hover:text-gold transition">Our Services</a>
+                <a href="#contact" class="text-gray-300 hover:text-gold transition">Contact Us</a>
+            </nav>
+
+            <!-- WhatsApp Header Button -->
+            <div class="hidden sm:flex items-center">
+                <a href="https://wa.me/923357229551?text=Hello%20N%20%26%20B%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="gold-btn-gradient text-charcoal-900 px-5 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg hover:shadow-gold/20 transition transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>WhatsApp Us</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="lg:hidden text-gold text-2xl p-2 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-charcoal-800 border-b border-gold/20 px-6 py-6 space-y-4">
+            <a href="#" class="block text-gold font-medium py-1">Home</a>
+            <a href="#about" class="block text-gray-300 hover:text-gold py-1">About Us</a>
+            <a href="#companies" class="block text-gray-300 hover:text-gold py-1">Our Companies</a>
+            <a href="#projects" class="block text-gray-300 hover:text-gold py-1">Our Projects</a>
+            <a href="#services" class="block text-gray-300 hover:text-gold py-1">Our Services</a>
+            <a href="#contact" class="block text-gray-300 hover:text-gold py-1">Contact Us</a>
+            <div class="pt-2">
+                <a href="https://wa.me/923357229551?text=Hello%20N%20%26%20B%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="gold-btn-gradient text-charcoal-900 w-full py-3 rounded-lg font-bold text-center flex items-center justify-center gap-2 shadow">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>WhatsApp Us</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[85vh] flex items-center relative py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-8 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-semibold tracking-wider uppercase">
+                    <i class="fa-solid fa-gem text-gold"></i> Building Tomorrow Together
+                </div>
+                <h1 class="font-cinzel text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight">
+                    N & B <br><span class="gold-gradient-text">Group of Companies</span>
+                </h1>
+                <p class="text-gray-300 text-lg sm:text-xl max-w-2xl font-light leading-relaxed">
+                    Diversified businesses. Stronger communities. A better tomorrow.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="https://wa.me/923357229551?text=Hello%20N%20%26%20B%20Group,%20I%20want%20to%20connect%20on%20WhatsApp." target="_blank" class="gold-btn-gradient text-charcoal-900 px-8 py-4 rounded-xl font-bold flex items-center gap-3 shadow-xl hover:scale-105 transition duration-300">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Contact on WhatsApp</span>
+                    </a>
+                    <a href="#projects" class="bg-charcoal-800/80 hover:bg-charcoal-700 text-white border border-gold/40 px-8 py-4 rounded-xl font-bold flex items-center gap-3 backdrop-blur transition duration-300">
+                        <span>Explore Our Projects</span>
+                        <i class="fa-solid fa-arrow-right text-gold"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sidebar Info Card (Matching Reference Image Right Panel) -->
+            <div class="lg:col-span-4 hidden lg:block">
+                <div class="bg-charcoal-800/90 border border-gold/30 rounded-2xl p-6 backdrop-blur-md shadow-2xl space-y-6">
+                    <div class="flex items-center justify-between border-b border-gray-700 pb-4">
+                        <span class="text-gray-400 text-sm font-medium">PEOPLE</span>
+                        <span class="text-gold font-cinzel font-bold">15,000+</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-gray-700 pb-4">
+                        <span class="text-gray-400 text-sm font-medium">PROJECTS</span>
+                        <span class="text-gold font-cinzel font-bold">25+ Completed</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-gray-700 pb-4">
+                        <span class="text-gray-400 text-sm font-medium">BUSINESSES</span>
+                        <span class="text-gold font-cinzel font-bold">8 Verticals</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-gray-700 pb-4">
+                        <span class="text-gray-400 text-sm font-medium">COMMUNITIES</span>
+                        <span class="text-gold font-cinzel font-bold">Connected</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-1">
+                        <span class="text-gray-400 text-sm font-medium">REAL VALUES</span>
+                        <span class="text-gold font-cinzel font-bold">Last Longer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Companies Section (Exact 8 items matching reference) -->
+    <section id="companies" class="py-20 bg-charcoal-900 px-4 sm:px-6 lg:px-8 border-t border-charcoal-700">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-gold text-xs font-semibold tracking-widest uppercase block mb-2">Our Companies</span>
+                    <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white">A Diversified Group Serving Multiple Industries</h2>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="https://wa.me/923357229551?text=Hello%20N%20%26%20B%20Group,%20I%20would%20like%20to%20view%20all%20companies." target="_blank" class="text-gold hover:text-gold-light text-sm font-semibold flex items-center gap-2 group">
+                        <span>View All Companies</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Companies Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+                <!-- 1. N & B Real Estate -->
+                <div onclick="openInquiryModal('N & B Real Estate')" class="bg-charcoal-800 border border-gold/20 hover:border-gold rounded-2xl p-4 text-center cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xl group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-xs mb-1">N & B Real Estate</h3>
+                </div>
+
+                <!-- 2. N & B Builders & Developers -->
+                <div onclick="openInquiryModal('N & B Builders & Developers')" class="bg-charcoal-800 border border-gold/20 hover:border-gold rounded-2xl p-4 text-center cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xl group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-xs mb-1">N & B Builders & Developers</h3>
+                </div>
+
+                <!-- 3. N & B Home Renovation & Co. -->
+                <div onclick="openInquiryModal('N & B Home Renovation & Co.')" class="bg-charcoal-800 border border-gold/20 hover:border-gold rounded-2xl p-4 text-center cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xl group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-xs mb-1">N & B Home Renovation & Co.</h3>
+                </div>
+
+                <!-- 4. Nafeesa by N & B -->
+                <div onclick="openInquiryModal('Nafeesa by N & B')" class="bg-charcoal-800 border border-gold/20 hover:border-gold rounded-2xl p-4 text-center cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xl group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-xs mb-1">Nafeesa by N & B</h3>
+                </div>
+
+                <!-- 5. Khadija's Chocolate Dreams by N & B -->
+                <div onclick="openInquiryModal('Khadija\'s Chocolate Dreams by N & B')" class="bg-charcoal-800 border border-gold/20 hover:border-gold rounded-2xl p-4 text-center cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xl group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-cookie-bite"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-xs mb-1">Khadija's Chocolate Dreams by N & B</h3>
+                </div>
+
+                <!-- 6. WHY Studio by N & B -->
+                <div onclick="openInquiryModal('WHY Studio by N & B')" class="bg-charcoal-800 border border-gold/20 hover:border-gold rounded-2xl p-4 text-center cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xl group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-xs mb-1">WHY Studio by N & B</h3>
+                </div>
+
+                <!-- 7. N & B Goat Farming -->
+                <div onclick="openInquiryModal('N & B Goat Farming')" class="bg-charcoal-800 border border-gold/20 hover:border-gold rounded-2xl p-4 text-center cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xl group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-otter"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-xs mb-1">N & B Goat Farming</h3>
+                </div>
+
+                <!-- 8. N & B General Trading FZE LLC UAE -->
+                <div onclick="openInquiryModal('N & B General Trading FZE LLC UAE')" class="bg-charcoal-800 border border-gold/20 hover:border-gold rounded-2xl p-4 text-center cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xl group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-xs mb-1">N & B General Trading FZE LLC UAE</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Projects Section (Matching Reference: R.H Residency, Al Burhan Residency, 2x Coming Soon) -->
+    <section id="projects" class="py-20 bg-charcoal-800/50 px-4 sm:px-6 lg:px-8 border-t border-charcoal-700">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-gold text-xs font-semibold tracking-widest uppercase block mb-2">Our Projects</span>
+                    <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white">Developing Spaces for a Better Tomorrow</h2>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="https://wa.me/923357229551?text=Hello%20N%20%26%20B%20Group,%20I%20would%20like%20to%20view%20all%20projects." target="_blank" class="text-gold hover:text-gold-light text-sm font-semibold flex items-center gap-2 group">
+                        <span>View All Projects</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 1. R.H Residency -->
+                <div class="bg-charcoal-800 border border-gold/30 rounded-2xl overflow-hidden shadow-2xl group flex flex-col justify-between">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800" alt="R.H Residency" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-gold text-charcoal-900 font-bold text-xs px-3 py-1 rounded-full shadow">
+                            G+6
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-white mb-1">R.H Residency</h3>
+                            <p class="text-xs text-gold mb-2 flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> Upper Gizri, Karachi</p>
+                            <p class="text-xs text-gray-300">2 & 3 Bedroom Apartments & Shops</p>
+                        </div>
+                        <button onclick="openInquiryModal('R.H Residency (Upper Gizri, Karachi)')" class="w-full py-2.5 rounded-xl border border-gold text-gold font-semibold text-sm hover:bg-gold hover:text-charcoal-900 transition flex items-center justify-center gap-2">
+                            <span>View Project</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Al Burhan Residency -->
+                <div class="bg-charcoal-800 border border-gold/30 rounded-2xl overflow-hidden shadow-2xl group flex flex-col justify-between">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" alt="Al Burhan Residency" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-gold text-charcoal-900 font-bold text-xs px-3 py-1 rounded-full shadow">
+                            G+3
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-white mb-1">Al Burhan Residency</h3>
+                            <p class="text-xs text-gold mb-2 flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> S12 Burhani Garden, Malir</p>
+                            <p class="text-xs text-gray-300">1 & 2 Bedroom Apartments & Shops (Corner Plot)</p>
+                        </div>
+                        <button onclick="openInquiryModal('Al Burhan Residency (S12 Burhani Garden, Malir)')" class="w-full py-2.5 rounded-xl border border-gold text-gold font-semibold text-sm hover:bg-gold hover:text-charcoal-900 transition flex items-center justify-center gap-2">
+                            <span>View Project</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. New Project Coming Soon -->
+                <div class="bg-charcoal-800 border border-gold/30 rounded-2xl overflow-hidden shadow-2xl group flex flex-col justify-between">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" alt="New Project Coming Soon" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-charcoal-900/90 text-gold border border-gold/50 font-bold text-xs px-3 py-1 rounded-full shadow">
+                            Coming Soon
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-white mb-1">New Project Coming Soon</h3>
+                            <p class="text-xs text-gold mb-2 flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> Karachi</p>
+                            <p class="text-xs text-gray-300">Upcoming architectural milestone in prime location.</p>
+                        </div>
+                        <button onclick="openInquiryModal('New Project Coming Soon (Karachi)')" class="w-full py-2.5 rounded-xl bg-gold/10 border border-gold/30 text-gold font-semibold text-sm hover:bg-gold hover:text-charcoal-900 transition flex items-center justify-center gap-2">
+                            <span>Stay Updated</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. New Project Coming Soon -->
+                <div class="bg-charcoal-800 border border-gold/30 rounded-2xl overflow-hidden shadow-2xl group flex flex-col justify-between">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&q=80&w=800" alt="New Project Coming Soon" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-charcoal-900/90 text-gold border border-gold/50 font-bold text-xs px-3 py-1 rounded-full shadow">
+                            Coming Soon
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-white mb-1">New Project Coming Soon</h3>
+                            <p class="text-xs text-gold mb-2 flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> Karachi</p>
+                            <p class="text-xs text-gray-300">Upcoming luxurious residential spaces.</p>
+                        </div>
+                        <button onclick="openInquiryModal('New Project Coming Soon 2 (Karachi)')" class="w-full py-2.5 rounded-xl bg-gold/10 border border-gold/30 text-gold font-semibold text-sm hover:bg-gold hover:text-charcoal-900 transition flex items-center justify-center gap-2">
+                            <span>Stay Updated</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Brands Section (Matching Reference: WHY Studio, Nafeesa, Khadija's Chocolate Dreams, N & B General Trading) -->
+    <section id="brands" class="py-20 bg-charcoal-900 px-4 sm:px-6 lg:px-8 border-t border-charcoal-700">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-gold text-xs font-semibold tracking-widest uppercase block mb-2">Our Brands</span>
+                    <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white">Lifestyle, Creativity & Global Opportunities</h2>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="https://wa.me/923357229551?text=Hello%20N%20%26%20B%20Group,%20I%20would%20like%20to%20view%20all%20brands." target="_blank" class="text-gold hover:text-gold-light text-sm font-semibold flex items-center gap-2 group">
+                        <span>View All Brands</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Brands Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 1. WHY Studio -->
+                <div class="relative rounded-2xl overflow-hidden group h-80 shadow-2xl border border-gold/30">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800" alt="WHY Studio" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/40 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-gold text-xs font-bold uppercase tracking-wider mb-1">WHY Studio by N & B</span>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-3">Designing Ideas. Creating Impact.</h3>
+                        <button onclick="openInquiryModal('WHY Studio by N & B')" class="py-2 px-4 bg-charcoal-900/80 border border-gold text-gold rounded-lg font-semibold text-xs hover:bg-gold hover:text-charcoal-900 transition text-center">
+                            Explore WHY Studio ->
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Nafeesa -->
+                <div class="relative rounded-2xl overflow-hidden group h-80 shadow-2xl border border-gold/30">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800" alt="Nafeesa" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/40 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-gold text-xs font-bold uppercase tracking-wider mb-1">Nafeesa by N & B</span>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-3">Modest Fashion for Modern Women.</h3>
+                        <button onclick="openInquiryModal('Nafeesa by N & B')" class="py-2 px-4 bg-charcoal-900/80 border border-gold text-gold rounded-lg font-semibold text-xs hover:bg-gold hover:text-charcoal-900 transition text-center">
+                            Explore Nafeesa ->
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. Khadija's Chocolate Dreams -->
+                <div class="relative rounded-2xl overflow-hidden group h-80 shadow-2xl border border-gold/30">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=800" alt="Khadija's Chocolate Dreams" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/40 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-gold text-xs font-bold uppercase tracking-wider mb-1">Khadija's Chocolate Dreams by N & B</span>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-3">Homemade Brownies, Cookies & More.</h3>
+                        <button onclick="openInquiryModal('Khadija\'s Chocolate Dreams by N & B')" class="py-2 px-4 bg-charcoal-900/80 border border-gold text-gold rounded-lg font-semibold text-xs hover:bg-gold hover:text-charcoal-900 transition text-center">
+                            Explore Menu ->
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. N & B General Trading -->
+                <div class="relative rounded-2xl overflow-hidden group h-80 shadow-2xl border border-gold/30">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800" alt="General Trading UAE" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/40 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-gold text-xs font-bold uppercase tracking-wider mb-1">N & B General Trading FZE LLC UAE</span>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-3">Global Trade. New Opportunities.</h3>
+                        <button onclick="openInquiryModal('N & B General Trading FZE LLC UAE')" class="py-2 px-4 bg-charcoal-900/80 border border-gold text-gold rounded-lg font-semibold text-xs hover:bg-gold hover:text-charcoal-900 transition text-center">
+                            Learn More ->
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Other Business Section (Goat Farming matching reference) -->
+    <section class="py-16 bg-charcoal-800 border-y border-gold/20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 space-y-4">
+                <span class="text-gold text-xs font-semibold tracking-widest uppercase">Our Other Business</span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white">N & B Goat Farming</h2>
+                <p class="text-gray-300 text-sm sm:text-base leading-relaxed">Sustainable Farming for a Better Tomorrow.</p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+                    <div class="bg-charcoal-900/80 border border-gold/20 p-3 rounded-xl text-center">
+                        <i class="fa-solid fa-award text-gold text-xl mb-1"></i>
+                        <p class="text-xs font-semibold text-white">Quality</p>
+                    </div>
+                    <div class="bg-charcoal-900/80 border border-gold/20 p-3 rounded-xl text-center">
+                        <i class="fa-solid fa-shield-heart text-gold text-xl mb-1"></i>
+                        <p class="text-xs font-semibold text-white">Care</p>
+                    </div>
+                    <div class="bg-charcoal-900/80 border border-gold/20 p-3 rounded-xl text-center">
+                        <i class="fa-solid fa-chart-line text-gold text-xl mb-1"></i>
+                        <p class="text-xs font-semibold text-white">Growth</p>
+                    </div>
+                    <div class="bg-charcoal-900/80 border border-gold/20 p-3 rounded-xl text-center">
+                        <i class="fa-solid fa-users text-gold text-xl mb-1"></i>
+                        <p class="text-xs font-semibold text-white">Community</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-6 flex flex-col sm:flex-row items-center justify-end gap-4">
+                <div class="w-full sm:w-auto overflow-hidden rounded-2xl border border-gold/30 shadow-xl max-h-48">
+                    <img src="https://images.unsplash.com/photo-1527153857715-3908f2ae5e61?auto=format&fit=crop&q=80&w=600" alt="Goat Farming" class="w-full h-full object-cover">
+                </div>
+                <button onclick="openInquiryModal('N & B Goat Farming')" class="gold-btn-gradient text-charcoal-900 px-8 py-4 rounded-xl font-bold shadow-xl hover:scale-105 transition flex items-center gap-3 whitespace-nowrap">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span>Learn More -></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section (Matching Reference) -->
+    <section id="services" class="py-20 bg-charcoal-900 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-gold text-xs font-semibold tracking-widest uppercase block mb-2">Our Services</span>
+                    <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white">Comprehensive Solutions Under One Group</h2>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="https://wa.me/923357229551?text=Hello%20N%20%26%20B%20Group,%20I%20would%20like%20to%20view%20all%20services." target="_blank" class="text-gold hover:text-gold-light text-sm font-semibold flex items-center gap-2 group">
+                        <span>View All Services</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 1. Real Estate Development -->
+                <div onclick="openInquiryModal('Real Estate Development')" class="bg-charcoal-800 border border-gold/20 hover:border-gold p-8 rounded-2xl cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-lg mb-2">Real Estate Development</h3>
+                    <p class="text-xs text-gray-400 mb-4 leading-relaxed">Residential & Commercial Projects built to highest standards.</p>
+                    <span class="text-gold text-xs font-semibold flex items-center gap-1">Inquire Now <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <!-- 2. Construction Services -->
+                <div onclick="openInquiryModal('Construction Services')" class="bg-charcoal-800 border border-gold/20 hover:border-gold p-8 rounded-2xl cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-trowel-bricks"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-lg mb-2">Construction Services</h3>
+                    <p class="text-xs text-gray-400 mb-4 leading-relaxed">Quality, Safety & Timely Delivery guaranteed.</p>
+                    <span class="text-gold text-xs font-semibold flex items-center gap-1">Inquire Now <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <!-- 3. Renovation & Interior -->
+                <div onclick="openInquiryModal('Renovation & Interior')" class="bg-charcoal-800 border border-gold/20 hover:border-gold p-8 rounded-2xl cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-lg mb-2">Renovation & Interior</h3>
+                    <p class="text-xs text-gray-400 mb-4 leading-relaxed">Modern Renovation for better living and commercial spaces.</p>
+                    <span class="text-gold text-xs font-semibold flex items-center gap-1">Inquire Now <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <!-- 4. Investment & Advisory -->
+                <div onclick="openInquiryModal('Investment & Advisory')" class="bg-charcoal-800 border border-gold/20 hover:border-gold p-8 rounded-2xl cursor-pointer transition transform hover:-translate-y-1 shadow-lg group">
+                    <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-charcoal-900 transition">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-lg mb-2">Investment & Advisory</h3>
+                    <p class="text-xs text-gray-400 mb-4 leading-relaxed">Strategic Opportunities for sustainable growth and high ROI.</p>
+                    <span class="text-gold text-xs font-semibold flex items-center gap-1">Inquire Now <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Get in Touch Section (Matching Reference Footer CTA) -->
+    <section id="contact" class="cta-bg py-24 px-4 sm:px-6 lg:px-8 border-t border-gold/20 relative">
+        <div class="max-w-4xl mx-auto bg-charcoal-900/90 border border-gold/40 rounded-3xl p-8 sm:p-12 shadow-2xl backdrop-blur-md">
+            <div class="text-center space-y-4 mb-8">
+                <span class="text-gold text-xs font-semibold tracking-widest uppercase">Get in Touch</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-white">Let’s Build a Better Tomorrow Together</h2>
+                <p class="text-gray-300 text-sm sm:text-base max-w-xl mx-auto">Have a question or want to learn more about our projects, services or businesses? Contact us through WhatsApp or submit an inquiry.</p>
+            </div>
+
+            <!-- Inquiry Form with direct WhatsApp order generation -->
+            <form id="whatsapp-inquiry-form" onsubmit="submitToWhatsApp(event)" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gold mb-2">Your Full Name *</label>
+                        <input type="text" id="inquirer-name" required placeholder="e.g. Ahmed Khan" class="w-full bg-charcoal-800 border border-gold/30 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-gold transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gold mb-2">Phone Number / WhatsApp *</label>
+                        <input type="tel" id="inquirer-phone" required placeholder="e.g. +92 300 1234567" class="w-full bg-charcoal-800 border border-gold/30 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-gold transition">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gold mb-2">Company / Project / Service Interest *</label>
+                        <select id="inquirer-interest" class="w-full bg-charcoal-800 border border-gold/30 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold transition">
+                            <option value="N & B Real Estate">N & B Real Estate</option>
+                            <option value="N & B Builders & Developers">N & B Builders & Developers</option>
+                            <option value="R.H Residency (Upper Gizri)">R.H Residency (Upper Gizri)</option>
+                            <option value="Al Burhan Residency (Malir)">Al Burhan Residency (Malir)</option>
+                            <option value="N & B Home Renovation & Co.">N & B Home Renovation & Co.</option>
+                            <option value="Nafeesa by N & B">Nafeesa by N & B</option>
+                            <option value="Khadija's Chocolate Dreams">Khadija's Chocolate Dreams</option>
+                            <option value="WHY Studio by N & B">WHY Studio by N & B</option>
+                            <option value="N & B Goat Farming">N & B Goat Farming</option>
+                            <option value="N & B General Trading UAE">N & B General Trading UAE</option>
+                            <option value="General Inquiry / Other">General Inquiry / Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gold mb-2">Inquiry / Order Type</label>
+                        <select id="inquirer-type" class="w-full bg-charcoal-800 border border-gold/30 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold transition">
+                            <option value="Property Buying / Booking">Property Buying / Booking</option>
+                            <option value="Property Selling / Rental">Property Selling / Rental</option>
+                            <option value="Construction & Project Management">Construction & Project Management</option>
+                            <option value="Order / Purchase (Brands/Food/Fashion)">Order / Purchase</option>
+                            <option value="General Information">General Information</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gold mb-2">Message / Order Details *</label>
+                    <textarea id="inquirer-message" rows="4" required placeholder="Please write your specific order or inquiry details here..." class="w-full bg-charcoal-800 border border-gold/30 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-gold transition"></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button type="submit" class="gold-btn-gradient text-charcoal-900 flex-1 py-4 rounded-xl font-bold flex items-center justify-center gap-3 shadow-2xl hover:scale-[1.02] transition">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Submit & Send Details to WhatsApp</span>
+                    </button>
+                    <a href="https://wa.me/923357229551?text=Hello%20N%20%26%20B%20Group,%20I%20would%20like%20to%20connect%20with%20your%20team." target="_blank" class="bg-charcoal-800 hover:bg-charcoal-700 text-white border border-gold/40 px-6 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition">
+                        <i class="fa-solid fa-phone text-gold"></i>
+                        <span>Call: 0335 7229551</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer (Matching Reference Footer Layout) -->
+    <footer class="bg-charcoal-900 border-t border-gold/20 py-12 px-4 sm:px-6 lg:px-8 text-sm text-gray-400">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded border border-gold flex items-center justify-center bg-charcoal-800">
+                    <span class="font-cinzel font-bold text-gold">N&B</span>
+                </div>
+                <div>
+                    <span class="font-cinzel font-bold text-white tracking-wider block">N & B GROUP OF COMPANIES</span>
+                    <span class="text-xs text-gold">Building Tomorrow Together</span>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-medium">
+                <a href="#" class="hover:text-gold transition">Home</a>
+                <a href="#about" class="hover:text-gold transition">About Us</a>
+                <a href="#companies" class="hover:text-gold transition">Our Companies</a>
+                <a href="#projects" class="hover:text-gold transition">Our Projects</a>
+                <a href="#services" class="hover:text-gold transition">Our Services</a>
+                <a href="#contact" class="hover:text-gold transition">Contact Us</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-charcoal-800 border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-charcoal-900 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-charcoal-800 border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-charcoal-900 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" class="w-10 h-10 rounded-full bg-charcoal-800 border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-charcoal-900 transition"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-charcoal-800 border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-charcoal-900 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+            <p>© 2026 N & B Group of Companies. All rights reserved.</p>
+            <p class="text-gold font-medium mt-2 sm:mt-0">Karachi | UAE | Beyond</p>
+            <div class="flex space-x-6 mt-4 sm:mt-0">
+                <a href="#" class="hover:text-gold transition">Privacy Policy</a>
+                <a href="#" class="hover:text-gold transition">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Order / Inquiry Modal -->
+    <div id="inquiry-modal" class="fixed inset-0 z-50 bg-charcoal-900/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-charcoal-800 border border-gold/40 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeInquiryModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gold text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <span class="text-gold text-xs font-semibold uppercase tracking-widest block mb-1">WhatsApp Order & Inquiry</span>
+                <h3 id="modal-title" class="font-cinzel text-2xl font-bold text-white">Inquire or Order</h3>
+                <p class="text-xs text-gray-300 mt-1">Details will be automatically sent to our WhatsApp (+923357229551).</p>
+            </div>
+            <form onsubmit="submitModalToWhatsApp(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gold mb-1">Your Name *</label>
+                    <input type="text" id="modal-name" required placeholder="Full Name" class="w-full bg-charcoal-900 border border-gold/30 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gold">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gold mb-1">Phone Number / WhatsApp *</label>
+                    <input type="tel" id="modal-phone" required placeholder="+92 300 1234567" class="w-full bg-charcoal-900 border border-gold/30 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gold">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gold mb-1">Selected Item / Service</label>
+                    <input type="text" id="modal-interest-display" readonly class="w-full bg-charcoal-900/60 border border-gold/20 rounded-xl px-4 py-3 text-gold text-sm focus:outline-none font-semibold">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gold mb-1">Message / Order Requirements *</label>
+                    <textarea id="modal-message" rows="3" required placeholder="Please write your order or inquiry details..." class="w-full bg-charcoal-900 border border-gold/30 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gold"></textarea>
+                </div>
+                <button type="submit" class="gold-btn-gradient text-charcoal-900 w-full py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg hover:scale-[1.01] transition">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Send Order/Inquiry to WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-charcoal-800 border border-gold text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-32 opacity-0 transition-all duration-300">
+        <i class="fa-solid fa-check-circle text-gold text-xl"></i>
+        <div>
+            <h4 class="font-bold text-sm">Opening WhatsApp...</h4>
+            <p class="text-xs text-gray-300">Your order details are formatted for instant delivery.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Modal Logic
+        let currentSelectedInterest = '';
+
+        function openInquiryModal(interest) {
+            currentSelectedInterest = interest;
+            document.getElementById('modal-title').innerText = `Order / Inquire: ${interest}`;
+            document.getElementById('modal-interest-display').value = interest;
+            document.getElementById('inquiry-modal').classList.remove('hidden');
+        }
+
+        function closeInquiryModal() {
+            document.getElementById('inquiry-modal').classList.add('hidden');
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+        }
+
+        // WhatsApp Submission for Footer Contact Form
+        function submitToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('inquirer-name').value;
+            const phone = document.getElementById('inquirer-phone').value;
+            const interest = document.getElementById('inquirer-interest').value;
+            const type = document.getElementById('inquirer-type').value;
+            const message = document.getElementById('inquirer-message').value;
+
+            const whatsappNumber = "923357229551";
+            const text = `*New Website Order / Inquiry - N & B Group* %0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Interest:* ${encodeURIComponent(interest)}%0A*Type:* ${encodeURIComponent(type)}%0A*Message:* ${encodeURIComponent(message)}`;
+
+            showToast();
+            setTimeout(() => {
+                window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
+            }, 600);
+        }
+
+        // WhatsApp Submission for Modal Popup
+        function submitModalToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('modal-name').value;
+            const phone = document.getElementById('modal-phone').value;
+            const interest = currentSelectedInterest;
+            const message = document.getElementById('modal-message').value;
+
+            const whatsappNumber = "923357229551";
+            const text = `*Quick WhatsApp Order / Inquiry - N & B Group* %0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Item/Service:* ${encodeURIComponent(interest)}%0A*Details:* ${encodeURIComponent(message)}`;
+
+            closeInquiryModal();
+            showToast();
+            setTimeout(() => {
+                window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
+            }, 600);
+        }
+    </script>
+</body>
+</html>
